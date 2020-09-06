@@ -10,6 +10,6 @@ export class Welcome {
 
   public async clickMe() {
     var response = await this.httpClient.fetch("/api/HttpTriggerCSharp1?name=" + this.name);
-    this.message = `Welcome to ${await response.json()}!`;
+    this.message = `Welcome to ${await response.text()}!`;
   }
 }
